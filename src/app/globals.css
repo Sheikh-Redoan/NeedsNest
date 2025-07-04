@@ -1,26 +1,54 @@
+/* needsnest/src/app/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-Poppins: "Poppins", sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-geist-mono: var(--geist-mono);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+  --color-secondary-color: #FFD700;    
+  --color-white-color: #FFFFFF;
+  --color-background-color: #F5F7FA; 
+  --color-primary-color: #00AEEF;      
+  --color-text-color: #3C4249;         
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Primary Blue Shades */
+  --color-blue-50: #E6F7FD;
+  --color-blue-100: #B0E6FA;
+  --color-blue-200: #8ADAF8;
+  --color-blue-300: #54C9F4;
+  --color-blue-400: #33BEF2;
+  --color-blue-500: #00AEEF;
+  --color-blue-600: #009ED9;
+  --color-blue-700: #007CAA;
+  --color-blue-800: #006083;
+  --color-blue-900: #004964;
+
+  /* Grey Shades */
+  --color-grey-50: #EDEDED;
+  --color-grey-100: #C7C7C7;
+  --color-grey-200: #ACACAC;
+  --color-grey-300: #868686;
+  --color-grey-400: #6E6E6E;
+  --color-grey-500: #4A4A4A;
+  --color-grey-600: #434343;
+  --color-grey-700: #353535;
+  --color-grey-800: #292929;
+  --color-grey-900: #1F1F1F;
+
+  /* Black Shades */
+  --color-black-50: #E7E7E7;
+  --color-black-100: #B5B5B5;
+  --color-stroke: #919191; /* Special 'Stroke' color */
+  --color-black-300: #5F5F5F;
+  --color-black-400: #404040;
+  --color-black-500: #101010;
+  --color-black-600: #0F0F0F;
+  --color-black-700: #0B0B0B;
+  --color-black-800: #090909;
+  --color-black-900: #070707;
 }
