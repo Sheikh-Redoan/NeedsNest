@@ -1,33 +1,44 @@
 // src/app/Promises.tsx
-'use client';
-import React from 'react';
-import PromisesLock from '@/assets/icons/PromisesLock.png';
-import PromisesMessage from '@/assets/icons/promisesMessage.png';
-import PormisesHandshak from '@/assets/icons/pormisesHandshak.png';
-import { TPromiseItem } from '@/types';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import PromisesLock from "@/assets/icons/PromisesLock.png";
+import PromisesMessage from "@/assets/icons/promisesMessage.png";
+import PormisesHandshak from "@/assets/icons/pormisesHandshak.png";
+import { TPromiseItem } from "@/types";
+import Image from "next/image";
 const promiseData: TPromiseItem[] = [
   {
     // Use the imported SVG component directly instead of ReactSVG.
-    icon: <Image src={PromisesLock} alt='' className="w-7 h-7 fill-yellow-400" />,
-    title: 'Privacy First',
-    description: 'No calls. No spam. Just real offers from verified providers—on your terms.',
+    icon: (
+      <Image src={PromisesLock} alt="" className="w-7 h-7 fill-yellow-400" />
+    ),
+    title: "Privacy First",
+    description:
+      "No calls. No spam. Just real offers from verified providers—on your terms.",
   },
   {
-    icon: <Image src={PromisesMessage} alt='' className="w-7 h-7 fill-white" />,
-    title: 'Secure Communication',
-    description: 'No calls. No spam. Just real offers from verified providers—on your terms.',
+    icon: <Image src={PromisesMessage} alt="" className="w-7 h-7 fill-white" />,
+    title: "Secure Communication",
+    description:
+      "No calls. No spam. Just real offers from verified providers—on your terms.",
   },
   {
-    icon: <Image src={PormisesHandshak} alt='' className="w-7 h-7 fill-yellow-500" />,
-    title: 'Trust and Transparency',
-    description: 'No calls. No spam. Just real offers from verified providers—on your terms.',
+    icon: (
+      <Image
+        src={PormisesHandshak}
+        alt=""
+        className="w-7 h-7 fill-yellow-500"
+      />
+    ),
+    title: "Trust and Transparency",
+    description:
+      "No calls. No spam. Just real offers from verified providers—on your terms.",
   },
 ];
 
-export default function Promises(): React.JSX.Element {
+export default function Promises() {
   return (
-    <div className="w-full contaienr-div mt-[95px] mb-[103px] grid grid-cols-1 md:grid-cols-3 items-center gap-7">
+    <section className="w-full container-div grid grid-cols-1 md:grid-cols-3 items-center gap-7 py-16">
       {promiseData.map((item) => (
         <div
           key={item.title}
@@ -46,6 +57,6 @@ export default function Promises(): React.JSX.Element {
           </div>
         </div>
       ))}
-    </div>
+    </section>
   );
 }

@@ -1,60 +1,60 @@
 /* needsnest/src/app/globals.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import "tailwindcss";
 
 @theme {
   --font-Poppins: "Poppins", sans-serif;
 }
-body{
-  background: #F5F7FA;
+body {
+  background: #f5f7fa;
 }
 @theme inline {
   --font-geist-mono: var(--geist-mono);
 
-  --color-secondary-color: #FFD700;    
-  --color-white-color: #FFFFFF;
-  --color-background-color: #F5F7FA; 
-  --color-primary-color: #00AEEF;      
-  --color-text-color: #3C4249;         
+  --color-secondary-color: #ffd700;
+  --color-white-color: #ffffff;
+  --color-background-color: #f5f7fa;
+  --color-primary-color: #00aeef;
+  --color-text-color: #3c4249;
 
   /* Primary Blue Shades */
-  --color-blue-50: #E6F7FD;
-  --color-blue-100: #B0E6FA;
-  --color-blue-200: #8ADAF8;
-  --color-blue-300: #54C9F4;
-  --color-blue-400: #33BEF2;
-  --color-blue-500: #00AEEF;
-  --color-blue-600: #009ED9;
-  --color-blue-700: #007CAA;
+  --color-blue-50: #e6f7fd;
+  --color-blue-100: #b0e6fa;
+  --color-blue-200: #8adaf8;
+  --color-blue-300: #54c9f4;
+  --color-blue-400: #33bef2;
+  --color-blue-500: #00aeef;
+  --color-blue-600: #009ed9;
+  --color-blue-700: #007caa;
   --color-blue-800: #006083;
   --color-blue-900: #004964;
 
   /* Grey Shades */
-  --color-grey-50: #EDEDED;
-  --color-grey-100: #C7C7C7;
-  --color-grey-200: #ACACAC;
+  --color-grey-50: #ededed;
+  --color-grey-100: #c7c7c7;
+  --color-grey-200: #acacac;
   --color-grey-300: #868686;
-  --color-grey-400: #6E6E6E;
-  --color-grey-500: #4A4A4A;
+  --color-grey-400: #6e6e6e;
+  --color-grey-500: #4a4a4a;
   --color-grey-600: #434343;
   --color-grey-700: #353535;
   --color-grey-800: #292929;
-  --color-grey-900: #1F1F1F;
+  --color-grey-900: #1f1f1f;
 
   /* Black Shades */
-  --color-black-50: #E7E7E7;
-  --color-black-100: #B5B5B5;
+  --color-black-50: #e7e7e7;
+  --color-black-100: #b5b5b5;
   --color-stroke: #919191; /* Special 'Stroke' color */
-  --color-black-300: #5F5F5F;
+  --color-black-300: #5f5f5f;
   --color-black-400: #404040;
   --color-black-500: #101010;
-  --color-black-600: #0F0F0F;
-  --color-black-700: #0B0B0B;
+  --color-black-600: #0f0f0f;
+  --color-black-700: #0b0b0b;
   --color-black-800: #090909;
   --color-black-900: #070707;
 }
 
-.contaienr-div{
-  @apply max-w-[1320px] mx-auto px-4;
+.container-div {
+  @apply max-w-[1440px] mx-auto px-4;
 }
