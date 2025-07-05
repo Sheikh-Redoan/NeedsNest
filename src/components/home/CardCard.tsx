@@ -1,9 +1,10 @@
 "use client";
 
-import { MessageCircleMore, Heart } from "lucide-react";
+import { MessageCircleMore, Egg } from "lucide-react";
 import Image from "next/image";
 import { Car } from "@/types";
 import { cn } from "@/lib/utils";
+import { TfiLocationPin } from "react-icons/tfi";
 
 interface CarCardProps {
   car: Car;
@@ -11,38 +12,45 @@ interface CarCardProps {
 
 export const CarCard = ({ car }: CarCardProps) => {
   return (
-    <div className="rounded-xl border bg-white p-4 shadow-sm hover:shadow-md transition-all w-full max-w-sm">
-      <div className="relative rounded-md overflow-hidden">
-        <Image
-          src={car.imageUrl}
-          alt={car.name}
-          width={400}
-          height={200}
-          className="rounded-md object-cover w-full h-[180px]"
-        />
-        <button className="absolute top-2 right-2 bg-white p-2 rounded-full shadow">
-          <Heart size={18} className="text-gray-500" />
+    <article className="rounded-xl bg-white border border-background-color/10 p-5 shadow-sm hover:shadow-md transition-all w-full max-w-sm">
+      <div className="relative w-full max-w-sm">
+        {/* Clipped Image */}
+        <div className="inverted-radius w-full h-48">
+          <Image
+            src={car.imageUrl}
+            alt="Car"
+            width={400}
+            height={400}
+            className="size-full object-cover"
+          />
+        </div>
+
+        {/* Top-right Circular Button */}
+        <button className="absolute top-0 right-2.5 z-10 p-[9px] rounded-full bg-[#EDEDED] shadow-md flex items-center justify-center">
+          <Egg className="w-6 h-6 text-gray-700" />
         </button>
       </div>
 
-      <div className="mt-3">
-        <p className="text-sm text-gray-600">📍 {car.location}</p>
-        <h3 className="font-semibold text-lg">{car.name}</h3>
-        <p className="text-sm text-gray-500">{car.description}</p>
-        <p className="text-base font-semibold mt-2">{car.priceRange}</p>
+      <div className="mt-4 space-y-2">
+        <p className="flex items-center gap-2 text-xs font-normal">
+          <TfiLocationPin size={12} /> {car.location}
+        </p>
+        <h3 className="font-semibold text-[20px]">{car.name}</h3>
+        <p className="text-sm font-normal">{car.description}</p>
+        <p className="text-[20px] font-medium mt-2">{car.priceRange}</p>
 
         <button
           className={cn(
-            "mt-3 w-full flex items-center justify-center gap-2 text-sm font-medium px-4 py-2 rounded-md",
+            "mt-3 w-full flex items-center justify-center gap-2 text-lg font-medium px-5 py-[10px] rounded-md",
             car.isActive
               ? "bg-blue-500 text-white"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+              : "bg-background-color hover:bg-gray-200"
           )}
         >
           Chat
           <MessageCircleMore size={16} />
         </button>
       </div>
-    </div>
+    </article>
   );
 };

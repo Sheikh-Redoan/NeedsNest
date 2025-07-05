@@ -2,7 +2,7 @@ import React from "react";
 import bannerImage from "../assets/banner.jpg";
 import type { StaticImageData } from "next/image";
 
-export default function Hero(): React.ReactElement {
+export default function Hero() {
   const image: StaticImageData = bannerImage;
 
   return (

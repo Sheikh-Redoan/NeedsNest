@@ -1,5 +1,6 @@
 import { Car } from "@/types";
 import { CarCard } from "./CardCard";
+import assets from "@/assets";
 
 const cars: Car[] = [
   {
@@ -8,8 +9,8 @@ const cars: Car[] = [
     location: "United States",
     description:
       "Reliable, fuel-efficient mid-size sedan240-hp two-motor hybrid",
-    priceRange: "$28,500–$32,600",
-    imageUrl: "/car.jpg",
+    priceRange: "$28,500-$32,600",
+    imageUrl: assets.car,
   },
   {
     id: 2,
@@ -17,8 +18,8 @@ const cars: Car[] = [
     location: "United States",
     description:
       "Compact, tech-friendly sedanReliable, fuel-efficient mid-size",
-    priceRange: "$17,900–$20,400",
-    imageUrl: "/car.jpg",
+    priceRange: "$17,900-$20,400",
+    imageUrl: assets.car,
     isActive: true,
   },
   {
@@ -26,22 +27,22 @@ const cars: Car[] = [
     name: "Suzuki WagonR",
     location: "United States",
     description: "240-hp two-motor hybrid system with added towing capability",
-    priceRange: "$39,990–$44,990",
-    imageUrl: "/car.jpg",
+    priceRange: "$39,990-$44,990",
+    imageUrl: assets.car,
   },
   ...Array(5).fill({
     id: 4,
-    name: "Honda CR–V 2024",
+    name: "Honda CR-V 2024",
     location: "United States",
     description: "240-hp two-motor hybrid system with added towing capability",
-    priceRange: "$39,990–$44,990",
-    imageUrl: "/car.jpg",
+    priceRange: "$39,990-$44,990",
+    imageUrl: assets.car,
   }),
 ];
 
 export default function CarList() {
   return (
-    <section className="py-16 container-div">
+    <section className="py-12 container-div">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h1 className="text-[40px] font-semibold">What do you need today?</h1>
         <p className="text-2xl font-normal">
