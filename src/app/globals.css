@@ -6,7 +6,9 @@
 @theme {
   --font-Poppins: "Poppins", sans-serif;
 }
-
+body{
+  background: #F5F7FA;
+}
 @theme inline {
   --font-geist-mono: var(--geist-mono);
 
@@ -51,4 +53,8 @@
   --color-black-700: #0B0B0B;
   --color-black-800: #090909;
   --color-black-900: #070707;
+}
+
+.contaienr-div{
+  @apply max-w-[1320px] mx-auto px-4;
 }
