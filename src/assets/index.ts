@@ -4,6 +4,7 @@ import banner from "./banner.jpg";
 import step1 from "./step-1.png";
 import step2 from "./step-2.png";
 import step3 from "./step-3.png";
+import user from "./user.png";
 
 const assets = {
   car,
@@ -12,6 +13,7 @@ const assets = {
   step1,
   step2,
   step3,
+  user,
 };
 
 export default assets;
