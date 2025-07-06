@@ -7,21 +7,22 @@ import Drop from "@/assets/Drop.svg";
 import User from "@/assets/profile.svg";
 import "@/app/globals.css";
 import { Search } from "lucide-react";
-import Logo from "@/assets/logo.png";
+import assets from "@/assets";
 
 const Nav = () => {
   return (
     <nav className="w-full self-stretch pt-5  flex justify-between items-center gap-10">
       {/* Logo and Brand Name */}
       <Link href="/" className="flex items-center gap-2">
-        <div className="w-40 h-20 relative">
+        <div className="w-[44px] h-[44px]">
           <Image
-            src={Logo}
+            src={assets.logo}
             alt="NeedsNest Logo"
-            fill
-            style={{ objectFit: "contain" }}
+            width={100}
+            height={100}
           />
         </div>
+        <h1 className="text-primary-color text-2xl font-normal">NeedsNest</h1>
       </Link>
 
       {/* Search Bar */}

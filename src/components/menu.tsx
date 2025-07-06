@@ -13,7 +13,7 @@ export default function Menu() {
   };
 
   return (
-    <section className="pb-4 pt-2">
+    <section className="py-4">
       {/* Use 'relative' for positioning the dropdown */}
       <ul className="flex gap-10 text-lg font-normal justify-start text-stone-950 font-Poppins leading-7">
         {/* Categories item with onClick event */}
