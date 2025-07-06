@@ -10,8 +10,9 @@ export default function Header() {
 
   const handleQueryChange = (value: string) => {
     setQuery(value);
-    console.log({ query });
   };
+
+  console.log({ query });
 
   return (
     <section className="bg-white">
@@ -19,7 +20,11 @@ export default function Header() {
         <Nav />
         <Menu />
         <div className="md:hidden">
-          <SearchInput value={query} onChange={handleQueryChange} />
+          <SearchInput
+            value={query}
+            onChange={handleQueryChange}
+            debounceDelay={300}
+          />
         </div>
       </div>
     </section>

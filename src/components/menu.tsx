@@ -1,10 +1,11 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 
-export default function Menu() {
+export default function Menu({ fromMobileNav }: { fromMobileNav?: boolean }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const toggleDropdown = (): void => {
@@ -12,7 +13,7 @@ export default function Menu() {
   };
 
   return (
-    <section className="max-md:hidden">
+    <section className={cn(fromMobileNav ? "max-md:block" : "max-md:hidden")}>
       <ul className="flex flex-col md:flex-row gap-10 text-lg font-normal justify-start text-stone-950 font-Poppins leading-7">
         <li className="relative">
           {" "}
