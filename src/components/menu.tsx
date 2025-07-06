@@ -16,7 +16,6 @@ export default function Menu({ fromMobileNav }: { fromMobileNav?: boolean }) {
     <section className={cn(fromMobileNav ? "max-md:block" : "max-md:hidden")}>
       <ul className="flex flex-col md:flex-row gap-10 text-lg font-normal justify-start text-stone-950 font-Poppins leading-7">
         <li className="relative">
-          {" "}
           <p
             className="flex md:justify-center items-center cursor-pointer"
             onClick={toggleDropdown}
