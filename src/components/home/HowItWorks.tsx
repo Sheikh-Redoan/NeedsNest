@@ -31,8 +31,8 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="bg-white">
-      <div className="py-12 container-div">
+    <section className="bg-white" id="how-it-works">
+      <div className="py-25 container-div">
         <div className="max-w-6xl mx-auto text-center mb-10">
           <h1 className="text-[40px] font-semibold">How It Works</h1>
           <p className="text-2xl font-normal">
@@ -44,7 +44,7 @@ export default function HowItWorks() {
           {steps.map((step) => (
             <div
               key={step.id}
-              className="bg-background-color shadow-md rounded-xl p-5 text-center max-w-sm h-full flex flex-col items-center justify-center"
+              className="bg-background-color rounded-xl p-5 text-center h-full flex flex-col items-center justify-center"
             >
               <p className="text-2xl font-medium">{step.step}</p>
               <div className="w-[257px] h-[287px] flex items-center justify-center mb-4">

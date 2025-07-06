@@ -38,7 +38,7 @@ const promiseData: TPromiseItem[] = [
 
 export default function Promises() {
   return (
-    <section className="w-full container-div grid grid-cols-1 md:grid-cols-3 items-center gap-7 py-16">
+    <section className="w-full container-div grid grid-cols-1 md:grid-cols-3 items-center gap-7 pt-25">
       {promiseData.map((item) => (
         <div
           key={item.title}

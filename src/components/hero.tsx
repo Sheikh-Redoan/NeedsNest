@@ -24,7 +24,7 @@ export default function Hero() {
         <button className="bg-primary-color rounded-xl inline-flex justify-center items-center gap-3 px-[28px] py-[14px]  text-white text-lg font-semibold font-Poppins leading-7 cursor-pointer">
           Post a Need
         </button>
-        <button className="bg-primary-color/10 rounded-xl inline-flex justify-center items-center gap-3 px-[28px] py-[14px]  text-white text-lg font-semibold font-Poppins leading-7 cursor-pointer border border-primary-color hover:bg-primary-color/20 transition-colors duration-300">
+        <button className="bg-primary-color/10 rounded-xl inline-flex justify-center items-center gap-3 px-[28px] py-[14px] text-white hover:text-primary-color text-lg font-semibold font-Poppins leading-7 cursor-pointer border border-primary-color hover:bg-primary-color/20 transition-colors duration-300">
           Join as Salesperson
         </button>
       </div>
