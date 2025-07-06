@@ -45,14 +45,14 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="pb-25">
+    <section className="py-25" id="faq">
       <div className="max-w-3xl mx-auto text-center mb-10">
         <h2 className="text-[40px] font-semibold mb-2">
           Everything you need to know
         </h2>
       </div>
 
-      <div className="max-w-4xl mx-auto space-y-4">
+      <div className="max-w-sm md:max-w-4xl mx-auto space-y-4">
         {faqData.map((item, index) => (
           <div
             key={index}

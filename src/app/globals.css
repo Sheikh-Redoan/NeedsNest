@@ -9,6 +9,9 @@
 body {
   background: #f5f7fa;
 }
+html {
+  scroll-behavior: smooth;
+}
 @theme inline {
   --font-geist-mono: var(--geist-mono);
 

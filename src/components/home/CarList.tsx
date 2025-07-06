@@ -42,7 +42,7 @@ const cars: Car[] = [
 
 export default function CarList() {
   return (
-    <section className="py-25 container-div">
+    <section className="py-25 container-div" id="needs">
       <div className="max-w-6xl mx-auto text-center mb-10">
         <h1 className="text-[40px] font-semibold">What do you need today?</h1>
         <p className="text-2xl font-normal">

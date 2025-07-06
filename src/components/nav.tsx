@@ -1,20 +1,36 @@
-// needsnest/src/shared/Navbar.tsx
+"use client";
 
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Drop from "@/assets/Drop.svg";
 import User from "@/assets/profile.svg";
 import "@/app/globals.css";
-import { Search } from "lucide-react";
+import { Menu } from "lucide-react";
 import assets from "@/assets";
+import React, { useState } from "react";
+import SearchInput from "./search-input";
 
 const Nav = () => {
+  const [query, setQuery] = useState<string>("");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
+  const handleQueryChange = (value: string) => {
+    setQuery(value);
+    console.log({ query });
+  };
+
   return (
-    <nav className="w-full self-stretch pt-5  flex justify-between items-center gap-10">
+    <nav className="w-full self-stretch flex justify-between items-center gap-10">
+      {/* Mobile menu */}
+      <div className="md:hidden">
+        <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          <Menu />
+        </button>
+      </div>
+
       {/* Logo and Brand Name */}
       <Link href="/" className="flex items-center gap-2">
-        <div className="w-[44px] h-[44px]">
+        <div className="w-[36px] md:w-[44px] h-[36px] md:h-[44px]">
           <Image
             src={assets.logo}
             alt="NeedsNest Logo"
@@ -26,29 +42,21 @@ const Nav = () => {
       </Link>
 
       {/* Search Bar */}
-      <div className="flex-1 max-w-[717px]">
-        <div className="flex items-center w-full px-5 py-2.5 bg-slate-100 rounded-full border border-neutral-200">
-          <input
-            type="text"
-            placeholder="Search product"
-            className="flex-1 bg-transparent placeholder:text-stone-500 text-lg font-light font-Poppins focus:outline-none text-black"
-            aria-label="Search product"
-          />
-          <Search className="w-6 h-6 text-neutral-500" />
-        </div>
+      <div className="max-md:hidden flex-1 max-w-[717px]">
+        <SearchInput value={query} onChange={handleQueryChange} />
       </div>
 
       {/* Action Icons & Sign In */}
       <div className="flex items-center gap-8">
-        <div className="flex items-center gap-2.5 cursor-pointer w-8 h-8 bg-primary-color rounded-full justify-center">
+        <div className="flex items-center gap-2.5 cursor-pointer w-8 h-8 bg-primary-color rounded-full justify-center max-md:hidden">
           <Image src={Drop} alt="Drop icon" className="w-3 h-4 " />
         </div>
 
-        <div className="w-px h-8 bg-stone-300" />
+        <div className="w-px h-8 bg-stone-300 max-md:hidden" />
 
         <div className="flex items-center gap-2.5 cursor-pointer">
           <Image src={User} alt="User icon" className="w-8 h-8 " />
-          <div className="flex flex-col">
+          <div className="flex flex-col max-md:hidden">
             <span className="text-neutral-500 text-sm font-Poppins leading-tight">
               Sign In
             </span>

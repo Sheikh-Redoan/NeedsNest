@@ -12,12 +12,12 @@ export default function Menu() {
   };
 
   return (
-    <section className="py-4">
-      <ul className="flex gap-10 text-lg font-normal justify-start text-stone-950 font-Poppins leading-7">
+    <section className="max-md:hidden">
+      <ul className="flex flex-col md:flex-row gap-10 text-lg font-normal justify-start text-stone-950 font-Poppins leading-7">
         <li className="relative">
           {" "}
           <p
-            className="flex justify-center items-center cursor-pointer"
+            className="flex md:justify-center items-center cursor-pointer"
             onClick={toggleDropdown}
           >
             Categories <IoIosArrowDown />
@@ -38,10 +38,10 @@ export default function Menu() {
           )}
         </li>
         <li>
-          <Link href="#how-it-works">How it Works</Link>
+          <Link href="#needs">Neeeds</Link>
         </li>
         <li>
-          <Link href="#pricing">Pricing Plans</Link>
+          <Link href="#how-it-works">How it Works</Link>
         </li>
         <li>
           <Link href="#faq">FAQ</Link>
