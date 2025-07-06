@@ -58,10 +58,8 @@ export default function Testimonials() {
   return (
     <section className="py-25">
       <div className="max-w-md mx-auto text-center mb-10">
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">
-          Users about us
-        </h2>
-        <p className="text-gray-600 text-lg">
+        <h2 className="text-[40px] font-semibold mb-2">Users about us</h2>
+        <p className="text-gray-600 text-[16px]">
           Real feedback from people who found exactly what they needed
         </p>
       </div>
